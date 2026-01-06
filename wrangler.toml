@@ -1,0 +1,12 @@
+name = "ldc-shop-worker"
+main = "_workers_v2/worker.js"
+compatibility_date = "2023-01-01"
+
+# Cloudflare D1 binding (create a database and fill in database_id).
+[[d1_databases]]
+binding = "DB"
+database_name = "ldc-shop-db"
+database_id = "bb5e5020-1b4d-437b-b007-d74fff63d019"
+
+[triggers]
+crons = ["*/1 * * * *"]

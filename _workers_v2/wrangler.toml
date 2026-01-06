@@ -1,0 +1,18 @@
+name = "ldc-shop-v2"
+main = "worker.js"
+compatibility_date = "2023-01-01"
+
+# Custom Domain
+routes = [
+	{ pattern = "shop.chatgpt.org.uk", custom_domain = true }
+]
+
+# D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "ldc-shop-v2-db"
+database_id = "e5c247c3-feef-4255-b4dc-fb9cc144c17e"
+# preview_database_id = "DB" # Use strictly for local dev
+
+[triggers]
+crons = ["*/1 * * * *"]
